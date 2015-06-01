@@ -9,62 +9,91 @@
 	<script src="../js/jquery-2.1.4.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </head>
+<script>
+	$('#descTab a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+	})
+</script>
 <body>
 <div class="container w-div">
 	<div class="col-xs-2">
-	<img src="../img/9.png" class="img-circle" width="200px">
+		<img src="../img/logo.jpg">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+				<span class="glyphicon glyphicon-home"></span>
+			</a></li>
+			<li role="presentation"><a href="#more" aria-controls="more" role="tab" data-toggle="tab">
+				<span class="glyphicon glyphicon-open-file"></span>
+			</a></li>
+		</ul>
 	</div>
-	<div class="col-xs-5 limiter">
-		<div class="row d-top">
-		<div id="myCarousel" class="carousel slide limiter" data-ride="carousel">
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-			</ol>
+	<div class="col-xs-9 limiter">
+		<!-- Tab panes -->
+		<div class="tab-content limiter">
+			<div role="tabpanel" class="tab-pane active fade in limiter" id="home">
+				<div class="row limiter">
+					<div class="col-xs-8 limiter">
+						<div class="row d-top">
 
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner limiter" role="listbox">
-				<div class="item active limiter">
-					<img class="limiter" src="../img/5.png" alt="Chania">
-				</div>
+							<div id="subCarousel" class="carousel slide limiter" data-ride="carousel">
 
-				<div class="item limiter">
-					<img class="limiter" src="../img/6.png" alt="Chania">
-				</div>
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+									<li data-target="#subCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#subCarousel" data-slide-to="1"></li>
+									<li data-target="#subCarousel" data-slide-to="2"></li>
+									<li data-target="#subCarousel" data-slide-to="3"></li>
+								</ol>
 
-				<div class="item limiter">
-					<img class="limiter" src="../img/7.png" alt="Flower">
-				</div>
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner limiter" role="listbox">
+									<div class="item active limiter">
+										<img class="limiter" src="../img/5.png" alt="Chania">
+									</div>
 
-				<div class="item limiter">
-					<img class="limiter" src="../img/8.png" alt="Flower">
+									<div class="item limiter">
+										<img class="limiter" src="../img/6.png" alt="Chania">
+									</div>
+
+									<div class="item limiter">
+										<img class="limiter" src="../img/7.png" alt="Flower">
+									</div>
+
+									<div class="item limiter">
+										<img class="limiter" src="../img/8.png" alt="Flower">
+									</div>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#subCarousel" role="button" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#subCarousel" role="button" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+						</div>
+						<div class="row d-bot jumbotron d-jumbotron">
+							<h1>Git</h1>
+							jo ipsum lorem de pulu.
+						</div>
+					</div>
+					<div class="col-xs-1">
+
+					</div>
+					<div class="col-xs-3 jumbotron limiter">
+
+					</div>
 				</div>
 			</div>
+			<div role="tabpanel" class="tab-pane fade" id="more">
 
-			<!-- Left and right controls -->
-			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
+			</div>
 		</div>
-		</div>
-		<div class="row d-bot jumbotron d-jumbotron">
-			<h1>Git</h1>
-			jo ipsum lorem de pulu.
-		</div>
-	</div>
-	<div class="col-xs-1">
-
-	</div>
-	<div class="col-xs-3 jumbotron limiter">
-
 	</div>
 	<div class="col-xs-1">
 
