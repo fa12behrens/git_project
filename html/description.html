@@ -152,19 +152,30 @@
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner limiter" role="listbox">
 								<div class="item active limiter">
-									278
+									Nicht-lineare Entwicklung[Bearbeiten]
+
+									Entwicklungsgeschichte mit extensiv genutztem Branching und Merging
+									Sowohl das Erstellen neuer Entwicklungszweige (branching), als auch das Verschmelzen zweier oder mehrerer Zweige (merging) sind integraler Bestandteil der Arbeit mit Git und fest in die Git-Werkzeuge eingebaut.[6] Git enthält Programme, mit deren Hilfe sich die nicht-lineare Geschichte eines Projektes einfach visualisieren lässt und mit deren Hilfe man in dieser Geschichte navigieren kann. Branches in Git sind (im Gegensatz zu anderen SCMs) sehr performant implementiert: Ein Branch stellt nur eine Reference, kurz ref, eine Textdatei mit einer Commit-ID, dar, die in einem Repository im Verzeichnis .git/refs/heads (z. B. .git/refs/heads/master für den immer vorhandenen master-Branch) liegt und auf einen bestimmten Commit verweist. Über dessen Parental Commits, also Elterncommits, lässt sich die Branchstruktur rekonstruieren. Durch diese Eigenschaften lassen sich weiterhin sehr große und effiziente Entwicklungsstrukturen, wie bei Git selbst oder dem Linux-Kernel, realisieren, bei denen jedes Feature und jeder Entwickler einen Branch oder ein eigenes Repository haben, aus dem der Maintainer dann Commits über Merge oder Cherry-pick (Nutzen einzelner Commits) in den Hauptzweig des Projekts (master) übernehmen kann.
 								</div>
 
 								<div class="item limiter">
-									34
+									Kein zentraler Server[Bearbeiten]
+
+									Dezentrale Verwaltung des gesamten Repositorys mit Hilfe von GIT.
+									Jeder Benutzer besitzt eine lokale Kopie des gesamten Repositorys, inklusive der Versionsgeschichte (history). So können die meisten Aktionen lokal und ohne Netzwerkzugriff ausgeführt werden. Es wird nicht zwischen lokalen Entwicklungszweigen und Entwicklungszweigen entfernter Repositories unterschieden. Obwohl es keinen technischen Unterschied zwischen verschiedenen Repositories gibt (außer dem zwischen normalen und bare-Repositories auf Servern, bei denen kein Working-Tree, also die „echten“ Dateien existiert), gilt die Kopie, auf die von einer Projekt-Homepage aus verwiesen wird, häufig als das „offizielle Repository“, in das die Revisionen der Entwickler übertragen werden. Es existieren spezielle Remote-tracking branches, das sind Referenzen (siehe Nicht-lineare Entwicklung), die auf den Stand eines anderen Repositorys zeigen.
 									<img class="limiter" src="../img/v-logo.jpg" alt="Chania">
 								</div>
 
 								<div class="item limiter">
-									Lorem ipsum
+									Datentransfer zwischen Repositories[Bearbeiten]
+									Daten können neben dem Übertragen auf Dateisystemebene (file://) mit einer Reihe verschiedener Netzwerkprotokolle zwischen Repositories übertragen werden. Git besitzt ein eigenes sehr effizientes Protokoll, das den TCP-Port 9418 nutzt (git://), allerdings nur zum Fetchen und Clonen genutzt werden kann, also dem Lesen eines Repositorys. Ebenso kann der Transfer über SSH (ssh://, das gängigste Protokoll für Schreiboperationen), HTTP (http://), HTTPS (https://) oder über (weniger effizient) FTP (ftp://) oder rsync (rsync://) erfolgen.[7] Die Übertragung in das „offizielle Repository“ eines Projekts erfolgt häufig in Form von Patches, die via E-Mail an den Entwickler oder eine Entwicklungs-Mailing-Liste geschickt werden. Alternativ kann auch ein Review-System wie Gerrit verwendet werden.[8] Für Projekte, die auf Webseiten wie GitHub oder BitBucket gehostet werden, kann eine Änderung einfach durch das Pushen eines Branches vorgeschlagen werden, der dann bei Bedarf durch ein Merge in das Projekt integriert wird.
 								</div>
 
 								<div class="item limiter">
+									Kryptographische Sicherheit der Projektgeschichte[Bearbeiten]
+
+									Korrumpiertes Objekt
+									Die Geschichte eines Projektes wird so gespeichert, dass der Hash einer beliebigen Revision (commit) auf der vollständigen Geschichte basiert, die zu dieser Revision geführt hat. Dadurch ist es nicht möglich, die Versionsgeschichte nachträglich zu manipulieren, ohne dass sich der Hash der Revision ändert. Einzelne Revisionen können zusätzlich markiert (tagging) und optional mit GPG digital signiert werden (signed tag), beispielsweise um den Zustand zum Zeitpunkt der Veröffentlichung einer neuen Version der Software zu kennzeichnen.
 									<img class="limiter" src="../img/logo_old.jpg" alt="Flower">
 								</div>
 							</div>

@@ -105,3 +105,10 @@ a:link {
 table {
 	background-color: #ffffff;
 }
+
+.githelper {
+	margin-top: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 25px;
+}
