@@ -1,9 +1,191 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<title>History</title>
+
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../css/general.css">
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
 </head>
 <body>
+	<div class="container w-div">
+
+		<div class="col-xs-2">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#home"
+					aria-controls="home" role="tab" data-toggle="tab"> <span
+						class="glyphicon glyphicon-home"></span>
+				</a></li>
+				<li role="presentation"><a href="#more" aria-controls="more"
+					role="tab" data-toggle="tab"> <span
+						class="glyphicon glyphicon-open-file"></span>
+				</a></li>
+			</ul>
+		</div>
+
+
+		<div class="col-xs-9 limiter">
+			<!-- Tab panes -->
+			<div class="tab-content limiter">
+				<div role="tabpanel" class="tab-pane active fade in limiter"
+					id="home">
+					<div class="row limiter">
+						<div class="col-xs-8 limiter">
+							<div class="row d-top">
+
+								<div id="subCarousel" class="carousel slide limiter"
+									data-ride="carousel">
+
+									<!-- Indicators -->
+									<ol class="carousel-indicators orange">
+										<li data-target="#subCarousel" data-slide-to="0"
+											class="active"></li>
+										<li data-target="#subCarousel" data-slide-to="1"></li>
+										<li data-target="#subCarousel" data-slide-to="2"></li>
+									</ol>
+
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner limiter" role="listbox">
+										<div class="item active limiter">
+											<img class="limiter limiter-w center-block"
+												src="../img/git-t-shirt.png" alt="Chania">
+										</div>
+
+										<div class="item limiter">
+											<img class="limiter limiter-w center-block"
+												src="../img/git-repository-version-control.png" alt="Chania">
+										</div>
+
+										<div class="item limiter">
+											<img class="limiter limiter-w center-block"
+												src="../img/cat.jpg" alt="Flower">
+										</div>
+									</div>
+
+									<!-- Left and right controls -->
+									<a class="left carousel-control" href="#subCarousel"
+										role="button" data-slide="prev"> <span
+										class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a> <a class="right carousel-control" href="#subCarousel"
+										role="button" data-slide="next"> <span
+										class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
+							<div class="row d-bot box d-box" style="overflow: scroll">
+								<h1>Git - Aufstieg der Versionsverwaltung</h1>
+								
+								"Wie bei vielen großen Dinge im Leben, begann Git mit ein wenig 
+								kreativen Zerstörung und feurige Kontroverse." - Git Entwicklung
+								<br>
+								
+								Die Entwicklung des Linux Kernels als Open Source Softwareprojekt
+								umfasst einen immer weiteren Bereich, sowohl an verteilter
+								Softwareentwicklung und globaler Distribution. Die Verbreitung der 
+								Änderungen an diesem Projekt erfolgten in der anfänglichen 
+								Entwicklungszeit als Patches und Archivdateien.
+								(1991 - 2002)
+								<br><br>
+								2002 begann innerhalb des Entwicklugnsprojekts des Linux Kernels die
+								Benutzung einer verteilten Versionsverwaltung namens BitKeeper.
+								<br><br>
+								Nach einiger Zeit der Zusammenarbeit zwischen der Linux entwickelnden 
+								Community und der kommerziellen Entwicklerfirma von BitKeeper 
+								wurde diese durch die Entzweiung der beiden Interessengruppen 
+								beendet. Diese Ereignisse gaben der Entwicklercommunity, und besonders
+								<a href="https://plus.google.com/+LinusTorvalds/posts" >Linus Torvalds</a>
+								, Schöpfer von Linux, Anlass, um eine eigene Software zur Versionsverwaltung 
+								zu entwicklen. Diese profitierte von den Erfahrungen, die durch die 
+								Benutzung von BitKeeper errungen wurden.
+								Dazu wurden folgende Eigenschaften als Ziele festgelegt:
+								<ul>
+								<li>Geschwindigkeit</li>
+								<li>Einfaches Design</li>
+								<li>Optimale Unterstützung für nicht-lineare Entwicklung (parallel branches)</li>
+								<li>Vollständige Verteilung</li>
+								<li>Effiziente Nutzung für globale Projekte wie den Linux Kernel (bezüglich Geschwindigkeit und Datengröße)</li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="col-xs-1"></div>
+						<div class="col-xs-3 box limiter">
+							<img src="../img/logo.jpg" class="limiter-w" title="neues Logo">
+							<table>
+								<tr>
+									<td>Aktuelle Version</td>
+									<td>2.4.2 (26.05.2015)</td>
+								</tr>
+								<tr>
+									<td>Programmiersprache</td>
+									<td>C, Bourne-Shell, Perl</td>
+								</tr>
+								<tr>
+									<td>Betriebssystem</td>
+									<td>Verschiedene Unix Systeme, Microsoft Windows and Mac
+										OS X</td>
+								</tr>
+								<tr>
+									<td>Hauptentwickler</td>
+									<td>Junio C. Hamano, Shawn O. Pearce, Linus Torvalds</td>
+								</tr>
+								<tr>
+									<td>Lizenz</td>
+									<td>GNU GPLv2</td>
+								</tr>
+								<tr>
+									<td>Link</td>
+									<td><a href="http://www.git-scm.com">git-scm.com</a></td>
+								</tr>
+							</table>
+							<img src="../img/logo_old.jpg" class="limiter-w"
+								title="altes Logo">
+						</div>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane fade limiter" id="more">
+					<div class="row limiter">
+						<div class="col-xs-12 limiter">
+							<div id="Carousel" class="carousel slide limiter"
+								data-ride="carousel" data-interval="100000">
+
+								<!-- Indicators -->
+								<ol class="carousel-indicators orange">
+									<li data-target="#Carousel" data-slide-to="0" class="active"></li>
+									<li data-target="#Carousel" data-slide-to="1"></li>
+									<li data-target="#Carousel" data-slide-to="2"></li>
+									<li data-target="#Carousel" data-slide-to="3"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner limiter" role="listbox">
+									<div class="item active limiter">278</div>
+
+									<div class="item limiter">
+										34 <img class="limiter" src="../img/6.png" alt="Chania">
+									</div>
+
+									<div class="item limiter">Lorem ipsum</div>
+
+									<div class="item limiter">
+										<img class="limiter" src="../img/8.png" alt="Flower">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
 
 </body>
 </html>
