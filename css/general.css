@@ -39,6 +39,12 @@ body {
 	width: 100%;
 }
 
+.top-circle {
+	width: 40%;
+	align-self: center;
+	margin-top: -65px;
+}
+
 .iframe {
 	height: 100%;
 	width: 100%;
@@ -71,7 +77,7 @@ body {
 }
 
 .box {
-	background-color: #ffffff;
+	background-color: #f14e32;
 	padding: 5px 5px 5px 5px;
 }
 
@@ -79,16 +85,30 @@ body {
 	margin-top: 3%;
 }
 
-table,tr,td {
-	border: 2px solid darkorange;
-}
-
 a:link {
 	background-color: #ffffff;
-	color: darkslategray;
-	font-size: 20px;
 }
 
 .orange {
 	background-color: #f14e32;
+}
+
+.white {
+	background-color: #ffffff;
+}
+
+.info-box {
+	margin-top: 10%;
+	height: 80%;
+}
+
+table {
+	background-color: #ffffff;
+}
+
+.githelper {
+	margin-top: 10px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 25px;
 }
