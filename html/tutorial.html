@@ -26,8 +26,12 @@
 		<div class="col-md-3 limiter">
 		</div>
 		<div class="col-md-6 limiter">
-			<p class="text-center">Im folgenden kurz gehaltenem Tutorial wird das einrichten von Git über GitHub
-				unterwiesen.</p>
+			<img src="../img/code_cat.jpg" class="center-block img-circle codecat">
+
+			<p class="text-center">Im folgenden kurz gehaltenem Tutorial wird das einrichten von Git über GitHub und
+				PhpStorm
+				unterwiesen. Es wird vorausgesetzt, dass PhpStorm bereits installiert ist.
+				Die einzelnen Schritte sind über die Buttons verfügbar und werden als Popover dargestellt.</p>
 
 			<div class="center">
 				<button id="1" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
@@ -36,44 +40,53 @@
 					Schritt 1
 				</button>
 				<button id="2" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Git installieren"
+						data-content="Git kann auf Git-scm heruntergeladen werden, hierbei ist darauf zu achten,
+						dass die Version für das korrekte Betriebssystem heruntergeladen wird. Git kann anschließend
+						in einem beliebigen Pfad mit oder ohne Git-Gui installiert werden.">
 					Schritt 2
 				</button>
 				<button id="3" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Projekt erstellen"
+						data-content="Das neue Projekt kann unter GitHub in der Reposetory Übersicht erstellt werden.">
 					Schritt 3
 				</button>
 				<button id="4" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Projekt lokal auschecken" data-content="Um das Projekt schnell und sinngemäß auszuchecken,
+						kann die HTTPS URL, die in der GitHub Projektübersicht zu finden ist verwendet werden.
+						Diese URL kann in PhpStorm unter dem Punkt VCS-Checkout from versioncontrol-GitHub angegeben
+						werden um das Projekt herunterzuladen.
+						">
 					Schritt 4
 				</button>
 				<button id="5" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Upstream definieren"
+						data-content="Um Fortschritte hochladen zu können, muss zuerst ein Upstream definiert werden.
+						Die neueren PhpStorm Versionen machen das oft schon automatisch, sollten sie es nicht tun,
+						so können sie in dem Pfad in dem sich ihr Projekt befindet mit Rechtsklick die Git Bash öffnen,
+						mit dem Befehl git branch --set-upstream-to origin/master kann dann auf den Master hochgeladen
+						werden.">
 					Schritt 5
 				</button>
 				<button id="6" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Projekt aktualisieren"
+						data-content="Um das  lokale Projekt mit dem globalen Projekt zu synchronisieren, muss lediglich
+						der blaue VCS Pfeil (update project) betätigt werden.">
 					Schritt 6
 				</button>
 				<button id="7" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Projekt lokal hochladen" data-content="Um die lokalen Änderungen temporär hochzuladen
+						werden sie zuerst lokal commited. Dafür wird der grüne VCS Pfeil (commit changes) betätigt.
+						In dem anschließend erscheinendem Fenster kann eine commit message verfasst werden, diese sollte
+						die erstellten Änderungen dokumentieren.">
 					Schritt 7
 				</button>
 				<button id="8" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
+						title="Projekt Global hochladen" data-content="Um das Projekt global auf GitHub hochzuladen,
+						wird der Button unter vcs-git-push betätigt. Zum pushen wird der Login des vorher erstellten
+						Accounts benötigt, zusätzlich kann ein Master Passwort benötigt werden, welches auf GitHub für
+						jedes einzelne Projekt festgelegt werden kann.">
 					Schritt 8
-				</button>
-				<button id="9" type="button" class="btn navbar-btn" data-toggle="popover" data-placement="bottom"
-						title="Registrieren" data-content="Als erstes sollte ein Account auf GitHub erstellt werden,
-					ansonsten können Fortschritte nicht hochgeladen werden.">
-					Schritt 9
 				</button>
 			</div>
 		</div>
