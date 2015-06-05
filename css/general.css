@@ -116,3 +116,10 @@ table {
 .codecat {
 	width: 25%;
 }
+
+.accordionTitle{
+	background: none;
+}
+.accordionTitle a:link{
+	background: none;
+}
