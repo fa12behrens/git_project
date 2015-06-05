@@ -123,3 +123,37 @@ table {
 .accordionTitle a:link{
 	background: none;
 }
+
+.img-horizontal {
+	float: left;
+}
+
+thead {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.bench tr, tr td{
+	border: 1px solid #f14e32;
+}
+
+.bench{
+	background: none;
+}
+
+.bench tr td {
+	min-width: 50px;
+}
+
+.des-h {
+	width: 75%;
+}
+
+.des-v {
+	width: 35%;
+}
+
+.glos {
+	width: 10%;
+}
+
