@@ -114,7 +114,8 @@ table {
 }
 
 .codecat {
-	width: 25%;
+	margin-top: -75px;
+	width: 40%;
 }
 
 .accordionTitle{
@@ -156,4 +157,3 @@ thead {
 .glos {
 	width: 10%;
 }
-
