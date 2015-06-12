@@ -72,7 +72,7 @@ body {
 	height: 60%;
 }
 
-.d-bot{
+.d-bot {
 	height: 36%;
 }
 
@@ -118,10 +118,11 @@ table {
 	width: 40%;
 }
 
-.accordionTitle{
+.accordionTitle {
 	background: none;
 }
-.accordionTitle a:link{
+
+.accordionTitle a:link {
 	background: none;
 }
 
@@ -134,11 +135,11 @@ thead {
 	font-style: oblique;
 }
 
-.bench tr, tr td{
+.bench tr, tr td {
 	border: 1px solid #f14e32;
 }
 
-.bench{
+.bench {
 	background: none;
 }
 
@@ -156,4 +157,9 @@ thead {
 
 .glos {
 	width: 10%;
+}
+
+.history-text {
+	height: 250px;
+	overflow: auto;
 }
