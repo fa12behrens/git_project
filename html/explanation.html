@@ -1,9 +1,301 @@
+<!--Created by Mirco Bockholt-->
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<!--Title-->
+	<title>GitHelper</title>
+	<!--Metas-->
+	<meta charset="UTF-8">
+	<!--Stylesheets-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/general.css">
+	<link rel="stylesheet" href="../css/explanation.css">
 </head>
 <body>
+<!--Main container-->
+<div class="container w-div tabbable">
+	<!--Left container-->
+	<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 leftContainer">
+		<!--Left inner container-->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 leftInnerContainer">
+			<h3>Erklärung</h3>
+			<!--Tab list-->
+			<ul class="nav nav-pills nav-stacked" id="explanationTabList">
+				<li class="active"><a href="#vc" data-toggle="tab">Versionskontrolle</a></li>
+				<li><a href="#repository" data-toggle="tab">Das Repository</a></li>
+				<li><a href="#snapshots" data-toggle="tab">Wie speichert git die Daten?</a></li>
+				<li><a href="#threeStates" data-toggle="tab">Die drei Stationen</a></li>
+				<li><a href="#changes" data-toggle="tab">Lebenszyklus der Dateien</a></li>
+				<li><a href="#remotes" data-toggle="tab">Arbeiten mit Remotes</a></li>
+				<li><a href="#branches" data-toggle="tab">Branching</a></li>
+				<li><a href="#sources" data-toggle="tab">Quellen</a></li>
+			</ul>
+		</div>
+	</div>
+	<!--Right container-->
+	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 rightContainer">
+		<!--Right inner container-->			<!--Tab content-->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 rightInnerContainer tab-content">
+			<!--Version control-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 tab-pane fade in active" id="vc">
+				<h2>Versionskontrolle</h2>
+				<span class="explanationText">
+					Unter einer Versionskontrolle versteht man ein System, welches Veränderungen innerhalb einzelner Dateien
+					speichert bzw. archiviert. Mit Hilfe eines solchen Systems können Dateien auf eine beliebige, frühere "Version" zurückgesetzt
+					werden. Auch ein Vergleich von verschiedenen Versionen einer oder mehrerer Dateien ist möglich. Somit erhöht
+					die Nutzung einer Versionskontrolle die Datensicherheit, da das Risiko eines kompletten Datenverlustes verringert wird.<br>
+					Im Folgenden werden drei verschiedene "Typen" von Versionskontrollen kurz erläutert:<br><br>
+					<!--Accordion-->
+					<div class="panel-group" id="accordionVC" role="tablist" aria-multiselectable="false">
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="localVC">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordionVC" href="#collapseLocalVC" aria-expanded="false" aria-controls="collapseLocalVC">
+										Lokale Versionskontrolle
+									</a>
+								</h4>
+							</div>
+							<div id="collapseLocalVC" class="panel-collapse collapse" role="tabpanel" aria-labelledby="localVC">
+								<div class="panel-body">
+									Bevor es Versionskontrollen gab, haben viele Nutzer gerne Dateien einfach in einen anderen Ordner kopiert.
+									Diese Methodik mag zwar sehr simple sein, <br>jedoch stellt sich diese auch als sehr fehleranfällig heraus.
+									So können beispielsweise Fehler durch den Nutzer entstehen, welcher nicht mehr durch seine eigene Ordnerstruktur
+									durchblickt.<br>
+									Zur Lösung dieses Problems wurden schon relativ früh erste Systeme zur Versionskontrolle programmiert.
+									Bei diesen Systemen handelt es sich um lokale Lösungen mit simplen Datenbanken, welche Veränderungen an Dateien archivieren/versionieren.
+									Allerdings ist ein kolaboratives Arbeiten mit solchen Systemen nicht möglich, da die Versionskontrollen lediglich lokal stattfinden.<br><br>
+									Ein Beispiel für ein solches System stellt <a target="_blank" href="http://www.gnu.org/software/rcs/">"Revision Control System"</a> (RCS) dar.
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="centralVC">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordionVC" href="#collapseCentralVC" aria-expanded="false" aria-controls="collapseCentralVC">
+										Zentrale Versionskontrolle
+									</a>
+								</h4>
+							</div>
+							<div id="collapseCentralVC" class="panel-collapse collapse" role="tabpanel" aria-labelledby="centralVC">
+								<div class="panel-body">
+									Um ein kolaboratives Arbeiten zu ermöglichen, wurden zentrale Systeme zur Versionskontrolle entwickelt.
+									Hierbei liegt die gesamte Versionsverwaltung mitsamt Dateien auf einem zentralen Server/Repository.
+									Die willigen Nutzer müssen nun die Dateien von diesem Server/Repository "herunterladen" (checkout) und ggf. neue Versionen wieder
+									"hochladen" (commit). Hierbei werden jedoch nur die Veränderungen als solche gespeichert. In den meisten Fällen werden die Server/Repositories von einem Administrator kontrolliert, der
+									bestimmen kann, welcher Nutzer an welchen Dateien arbeitet. Zudem kann der Administrator bestimmen, welche Änderungen in das
+									bestehende System mit einfließen und welche verworfen werden.<br><br>
+									Der Nachteil einer zentralen Versionskontrolle ist die "Verwundbarkeit" des Systems. Sollte der zentrale Server ausfallen,
+									so ist evt. ein kolaboratives Arbeiten für eine gewisse Zeitspanne nicht möglich. Des Weiteren kann ein kompletter Datenverlust
+									entstehen, wenn die Datensätze auf dem Server/Repository korrumpieren <br>(insofern kein vernünftiges Backup-System vorhanden ist).<br><br>
+									Beispiele für zentrale Versionskontrollen:<br>
+									- <a target="_blank" href="http://www.nongnu.org/cvs/">"Concurrent Versions System"</a> (CVS)<br>
+									- <a target="_blank" href="https://subversion.apache.org/">"Subversion"</a> (SVN)
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="distriVC">
+								<h4 class="panel-title">
+									<a data-toggle="collapse" data-parent="#accordionVC" href="#collapseDistriVC" aria-expanded="false" aria-controls="collapseDistriVC">
+										Dezentrale Versionskontrolle
+									</a>
+								</h4>
+							</div>
+							<div id="collapseDistriVC" class="panel-collapse collapse" role="tabpanel" aria-labelledby="distriVC">
+								<div class="panel-body">
+									Bei einer dezentralen Versionskontrolle bekommen die Nutzer keinen "Checkout" der aktuellsten Dateien.
+									Stattdessen bekommen die Nutzer einen kompletten Klon des gesamten Repositories.
+									Somit besitzt jeder Nutzer theoretisch ein vollwertiges Backup des Repositories.
+									Des Weiteren ist es möglich, mit mehreren entfernten Repositories (remotes) zu arbeiten, wodurch ein
+									kolaboratives Arbeiten gefördert wird. Beim "Hochladen" eines Projektes, wird dieses
+									als neue Version gekennzeichnet. Jede Version beinhaltet eine Sammlung an "Snapshots" für die verschiedenen
+									Veränderungen an den Dateien.<br><br>
+									Beispiele für dezentrale Versionskontrollen:<br>
+									- <a target="_blank" href="https://git-scm.com/">Git</a><br>
+									- <a target="_blank" href="https://mercurial.selenic.com/">Mercurial</a><br>
+									- <a target="_blank" href="http://bazaar.canonical.com/en/">Bazaar</a><br>
+									- <a target="_blank" href="http://darcs.net/">Darcs</a>
+								</div>
+							</div>
+						</div>
+					</div><br><br>
+					<img src="../img/local-version-control.png" alt="local-verion-control" /><br>
+					<span class="imgSub">Lokale Versionskontrolle</span><br><br>
+					<img src="../img/centralized-version-control-1.png" alt="centralized-version-control" /><br>
+					<span class="imgSub">Zentrale Versionskontrolle</span><br><br>
+					<img src="../img/distributed-version-control-2.png" alt="distributed-version-control" /><br>
+					<span class="imgSub">Dezentrale Versionskontrolle</span><br><br>
+				</span>
+			</div>
+			<!--Repository-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="repository">
+				<h2>Das Repository</h2>
+				<span class="explanationText">
+					Bei einem Repository handelt es sich um einen zentralen Speicherort für Dateien.
+					Ein Repository wird von den meisten Versionskontrollsystemen verwendet, um die
+					verschiedenen Versionen der Dateien zu speichern.<br><br> In der Linux-Welt werden Repositories
+					verwendet, um Software zu speichern/zugänglich zu machen. Anders als in Windows, wo Software
+					über ein Setup-Programm installiert werden kann, liegt die Software in den meisten Linux-Systemen auf
+					zentralen Repositories. Der Nutzer kann von diesen Repositories die benötigten Pakete herunterladen und installieren.
+					Die meisten Linux-Betriebssysteme haben ein zentrales Repository, auf dem geprüfte Software lagert.
+					Natürlich können aber auch andere Repositories (z.B für bestimmte Software) verwendet werden.<br><br>
+					<div class="gitQuote">
+						Das Wort Repository stammt von dem lateinischen <i>repositorium</i> (Lager) ab!<br>
+						Dies ist ein verwalteter Ort zur Aufbewahrung von geordneten Dokumenten, welcher einem bestimmten
+						Nutzerkreis (oder allen) zugänglich ist.
+					</div>
+				</span>
+			</div>
+			<!--Snapshots-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="snapshots">
+				<h2>Wie speichert git die Daten?</h2>
+				<span class="explanationText">
+					Der Unterschied zwischen git und anderen Versionskontrollen liegt darin, wie
+					mit den gespeicherten Daten umgegangen wird. Die meisten anderen Versionskontrollen
+					speichern die Veränderungen basierend auf den einzelnen Dateien ab.
+					Git hingegen speichert eine Ansammlung an Snapshots. Sollte eine Datei verändert werden,<br>
+					erstellt git einen Snapshot dazu und speichert eine Referenz zu diesem Snapshot ab.
+					Sollte eine Datei nicht verändert werden, erstellt git in der neuen Version des Projektes einfach
+					nur eine Verlinkung auf die letzte veränderte Version dieser Datei.<br><br>
+					<div class="gitQuote">
+						Ein Snapshot stellt in diesem Sinne ein Abbild von einer Datei dar.<br>
+						Mit Hilfe eines Snapshots wird der momentane Status einer Datei festgehalten.<br>
+						Somit ist es möglich, "Momentaufnahmen" einzelner Dateien anzufertigen.
+					</div><br><br>
+					<img src="../img/centralized-version-control-2.png" alt="save changes" /><br>
+					<span class="imgSub">Speichern der Veränderungen basierend auf den Dateien</span><br><br>
+					<img src="../img/distributed-version-control-1.png" alt="save snapshots" /><br>
+					<span class="imgSub">Speichern der Snapshots</span><br><br>
+				</span>
+			</div>
+			<!--Three states-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="threeStates">
+				<h2>Die drei Stationen</h2>
+				<span class="explanationText">
+					In git kann eine Datei drei verschiedene Statuus haben: "modified", "staged" und "committed".<br>
+					Dateien mit dem Status "modified" sind Dateien, welche seit dem letzten Checkout verändert, aber nicht
+					committed wurden.<br>
+					Dateien mit dem Status "staged" sind Dateien, welche für den nächsten Commit markiert wurden.
+					Diese Dateien werden beim nächsten Commit in das Repository hochgeladen.<br>
+					Dateien mit dem Status "committed" wurden in das Repository hochgeladen.<br><br>
+					Demnach gibt es in git auch drei "Stationen" in denen sich die Dateien aufhalten können:<br>
+					"Working directory", "Staging area" und "Git directory (Repository)".<br>
+					Das "Working directory" ist das Verzeichnis, in welchem der Nutzer arbeitet. Die modifizierten
+					Dateien liegen logischerweise zunächst dort.<br>
+					Die "Staging area" ist kein Verzeichnis, sondern eine Datei, welche die Information enthält,
+					welche Dateien als nächstes committed werden sollen.<br>
+					Das "Git directory" enthält die Objekt-Datenbank zuzüglich der entsprechenden Metadaten.
+					Die Snapshots werden hier gelagert.<br><br>
+					<div class="gitQuote">
+						"Checkout" = Daten werden heruntergeladen<br>
+						"Comit" = Daten werden hochgeladen
+					</div><br><br>
+					<img src="../img/threeStates.png" alt="three states" /><br>
+					<span class="imgSub">Die drei Stationen</span><br><br>
+				</span>
+			</div>
+			<!--Changes-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="changes">
+				<h2>Lebenszyklus der Dateien</h2>
+				<span class="explanationText">
+					Wie im vorherigen Kapitel erwähnt, kann eine Datei einen von mehreren Statuus haben.<br>
+					Grundlegend gibt es in git aber nur zwei Arten von Dateien: "Untracked"- und "tracked"-Dateien.<br>
+					"Tracked"-Dateien sind alle Dateien, welche im letzten Snapshot enthalten waren.
+					Diese Dateien wiederum können dann noch den Status "unmodified" "modified" "staged" oder "committed" besitzen.
+					"Untracked"-Dateien hingegen sind alle anderen Dateien, welche nicht im letzten Snapshot enthalten waren
+					und auch noch nicht den Status "staged" erhielten.<br><br>
+					<img src="../img/git_file_status_lifecycle.jpg" alt="file-lifecycle" /><br>
+					<span class="imgSub">Lebenszyklus der Dateien</span><br><br>
+				</span>
+			</div>
+			<!--Remotes-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="remotes">
+				<h2>Arbeiten mit Remotes</h2>
+				<span class="explanationText">
+					Um ein kolaboratives Arbeiten zu ermöglichen, wird ein gemeinsames Repository im Netzwerk benötigt.<br>
+					Bisher wurde in den vorherigen Kapiteln beschrieben, wie Änderungen im lokalen Repository gespeichert werden können.<br>
+					Dieses lokale Repository ist jedoch nicht für andere Mitarbeiter erreichbar.<br><br>
+					Änderungen, welche im lokalen Repository gespeichert wurden, können mit dem "git push [Ziel Repository] [Branch]" Kommando
+					in das gemeinsame Repository gespeichert werden. Allerdings ist zu beachten, dass niemand Anderes zuvor seine Änderungen
+					"hochgeladen" hat. Sollte dies der Fall sein, wird das eigene "git push" Kommando nicht ausgeführt.
+					Die Änderungen im gemeinsamen Repository müssen erst in das eigene, lokale Repository "heruntergeladen" und integriert werden.<br>
+					Erst dann kann das eigene "git push" Kommando ausgeführt werden.<br><br>
+					Änderungen, welche im gemeinsamen Repository gespeichert wurden, können mit dem "git fetch [Quelle (Repository)]" Kommando
+					in das eigene, lokale Repository "heruntergeladen" werden. Jedoch werden diese Änderungen noch nicht integriert.
+					Hierfür ist noch das "git merge" Kommando (siehe Kapitel Branching) erforderlich.<br>
+					Eine Abkürzung stellt das "git pull [Quelle (Repository)] [Branch]" Kommando dar. Hierbei werden die beiden Kommandos
+					"git fetch" und "git merge" ausgeführt.<br><br>
+					Eine weitere Besonderheit von git ist, dass Änderungen aus mehreren, gemeinsamen Repositories in das eigene, lokale
+					Repository "heruntergeladen" werden können.<br><br>
+					<img src="../img/git-remote.png" alt="git-remote" /><br>
+					<span class="imgSub">Git-Remote</span><br><br>
+				</span>
+			</div>
+			<!--Branches-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="branches">
+				<h2>Branching</h2>
+				<span class="explanationText">
+					Bei Branches handelt es sich um "Abzweigungen" im git Repository. Mit Hilfe dieser "Abzweigungen" können Entwickler
+					an Features arbeiten, <br>ohne den "Hauptzweig" zu gefährden. "Zweige" können nicht nur erstellt, sondern auch wieder
+					zusammengeführt werden.<br><br>
+					<img src="../img/git-workflow.png" alt="branches" /><br>
+					<span class="imgSub">Git branches</span><br><br>
+					Branches können in git ganz einfach mit dem "git branch [Branch-Name]" Kommando erstellt werden.
+					Hierbei wird ein neuer "Zeiger", welcher auf den aktuellen Commit zeigt, erstellt.
+					Sobald nun ein neuer Commit entsteht, bewegt sich der neue Zeiger mit, während der alte Zeiger noch beim
+					vorherigen Commit verweilt. Möchte man nun den Zeiger wechseln, verwendet man das "git checkout [Branch-Name]" Kommando.<br><br>
+					Woher weiss git nun, auf welchem Zeiger momentan gearbeitet wird?<br>
+					Hierfür verwendet git den speziellen Zeiger "HEAD", welcher immer auf den Branch/Commit zeigt, der gerade verwendet wird.<br><br>
+					<img src="../img/gitSimpleBranch.png" alt="Basic Branching" /><br>
+					<span class="imgSub">Einfaches Branching</span><br><br>
+					Um zwei Branches wieder zusammenzuführen, wird das "git merge [Branch-Name]" Kommando verwendet.<br>
+					Hierbei wird der Branch, auf welchem sich der "HEAD"-Zeiger befindet, mit dem Branch, welcher dem Befehl übergeben wird,
+					zusammengeführt. <br>Unterscheiden sich diese beiden Branches nur durch einen Commit, so wird ein "Fast-Forward" ausgeführt.
+					Hierbei wird der Zeiger einfach nach vorne bewegt, <br>da es keinen Kombinationsaufwand gibt und der Vorgang wie ein einfacher
+					Commit behandelt werden kann.<br><br> Wenn eine Datei in beiden Branches unterschiedliche Änderungen aufweist, kommt es zu einem
+					"Merge-Konflikt". Git weiss an dieser Stelle nicht, welche Änderung er für den neuen, zusammgeführten Commit verwenden soll.
+					In einem solchen Fall muss der Nutzer die entsprechenden Konflikte lösen, indem er die Datei bearbeitet und sich für
+					eine Änderung entscheidet. Hierbei hilft git dem Nutzer auch ein wenig. Der "Merge-Prozess" wird nicht abgebrochen, sondern pausiert,
+					bis der Konflikt gelöst wurde. Des Weiteren muss der Nutzer nur eine Datei öffnen, in der dann beide Änderungen,
+					welche entsprechend von git markiert wurden, aufzufinden sind. Der Nutzer muss lediglich nur eine Änderung entfernen.<br><br>
+					<img src="../img/gitSimpleMerge.png" alt="Basic Merging" /><br>
+					<span class="imgSub">Einfaches Merging</span><br><br>
+					Neben dem "git merge" Kommando gibt es auch noch das "git rebase [Branch-Name]" Kommando.
+					Es hat den selben Effekt wie das "git merge" Kommando, <br>jedoch sorgt es für eine "saubere" Historie.
+					Hierbei wird der gemeinsame Ursprung der beiden Branches ermittelt. Danach werden alle Commits des Branches,<br>
+					auf dem gerade gearbeitet wird, in eine temporäre Datei geschrieben. <br>Nun wird dieser Branch auf den Commit
+					des Ursprungs zurückgesetzt. Als Letztes werden alle Commits, welche in der temporären Datei gespeichert waren,<br>
+					auf den Ziel-Branch angewendet. Somit wird eine lineare Historie vorgetäuscht.<br><br>
+					<img src="../img/gitSimpleRebase.png" alt="Basic Rebasing" /><br>
+					<span class="imgSub">Einfaches Rebasing</span><br><br>
+				</span>
+			</div>
+			<!--Sources-->
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 fade tab-pane" id="sources">
+				<h2>Quellen</h2>
+				<span class="explanationText">
+					- <a target="_blank" href="https://git-scm.com/book/en/v2">git-scm.com</a><br>
+					- <a target="_blank" href="http://www.researchhubs.com/post/computing/web-application/version-control.html">researchhubs.com</a><br>
+					- <a target="_blank" href="http://techterms.com/definition/repository">techterms.com</a><br>
+					- <a target="_blank" href="https://en.wikipedia.org/wiki/Software_repository">wikipedia.com (Software_Repository)</a><br>
+					- <a target="_blank" href="http://de.wikipedia.org/wiki/Repositorium">wikipedia.com (Repositorium)</a><br>
+					- <a target="_blank" href="https://en.wikipedia.org/wiki/Snapshot_%28computer_storage%29">wikipedia.com (Snapshots)</a><br>
+					- <a target="_blank" href="http://www.ericmichaelstone.com/?p=195">ericmichaelstone.com</a><br>
+					- <a target="_blank" href="http://itpass.scitec.kobe-u.ac.jp/seminar/lecture/fy2009/090925/pub/html/094.html">itpass.scitec.kobe-u.ac.jp</a><br>
+					- <a target="_blank" href="http://i.stack.imgur.com/YSVtk.png">i.stack.imgur.com</a><br>
+					- <a target="_blank" href="https://garage.godaddy.com/tech/config/use-git-branches/">garage.godaddy.com</a><br>
+					- <a target="_blank" href="http://flsilva.com/blog/git-branching-and-merging/">flsilva.com</a><br>
+					- <a target="_blank" href="http://rypress.com/tutorials/git/rebasing">rypress.com</a><br>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
 
+<!--JavaScript-->
+<script src="../js/jquery-2.1.4.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

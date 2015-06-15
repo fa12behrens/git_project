@@ -1,0 +1,105 @@
+/**
+ * Created by Mirco Bockholt
+ */
+
+/*Left menu*/
+.leftContainer{
+    min-height: 600px;
+    background-color: #f14e32;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #f1bda8;
+}
+
+/*Right content container*/
+.rightContainer{
+    min-height: 600px;
+    max-height: 600px;
+    background-color: #f14e32;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px #f1bda8;
+}
+
+/*Inner container (left menu)*/
+.leftInnerContainer{
+    min-height: 580px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/*Inner container (right content container)*/
+.rightInnerContainer{
+    min-height: 580px;
+    max-height: 580px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+/*Image subtitles*/
+.imgSub{
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+/*Left menu buttons (use CSS3 gradients as background)*/
+#explanationTabList > li.active > a:hover{
+    /*background-color: #f14e32; */
+    background: -webkit-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F1BDA8 1%, #f14e32 99%); /* Standard syntax */
+    border-radius: 5px;
+}
+#explanationTabList > li.active{
+    background: -webkit-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F1BDA8 1%, #f14e32 99%); /* Standard syntax */
+    border-radius: 5px;
+}
+#explanationTabList > li > a:hover{
+    background-color: #F1BDA8;
+}
+#explanationTabList > li.active > a:focus{
+    background: -webkit-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F1BDA8 1%, #f14e32 99%); /* Standard syntax */
+    border-radius: 5px;
+}
+#explanationTabList > li.active > a{
+    background: -webkit-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F1BDA8 1%, #f14e32 99%); /* Standard syntax */
+    border-radius: 5px;
+}
+
+/*Accordion (uses CSS3 gradients as background)*/
+.panel-title a:link{
+    background: none;
+}
+#accordionVC > .panel-default > .panel-heading{
+    background: -webkit-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F1BDA8 1%, #f14e32 99%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F1BDA8 1%, #f14e32 99%); /* Standard syntax */
+    color: #ffffff;
+}
+
+#accordionVC .panel-body{
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+/*This <div>´s use a custom border (border image available since CSS3)*/
+.gitQuote{
+    border: 50px solid transparent;
+    padding: 15px;
+    -webkit-border-image: url("../img/borderImgExplanation.png") 25% round; /* Safari 3.1-5 */
+    -o-border-image: url("../img/borderImgExplanation.png") 25% round; /* Opera 11-12.1 */
+    border-image: url("../img/borderImgExplanation.png") 25% round;
+}
