@@ -95,7 +95,7 @@
     overflow-y: scroll;
 }
 
-/*This <div>´s use a custom border (border image available since CSS3)*/
+/*These <div>´s use a custom border (border image available since CSS3)*/
 .gitQuote{
     border: 50px solid transparent;
     padding: 15px;
