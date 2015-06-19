@@ -4,4 +4,4 @@ Firefox 38.0.5 -> Funktioniert einwandfrei.
 SRWare Iron 31.0.1700.0 -> Funktioniert. Bootstrap-Tabs flackern manchmal kurz.
 Opera 12.17 -> Nicht empfehlenswert.
 Internet Explorer 11.0.9600.17843 -> Funktioniert teilweise (Abgerundete Images werden nicht angezeigt).
-Safari for Windows 5.1.7 -> Funktioniert, wirkt aber nicht so flüssig.
+Safari for Windows 5.1.7 -> Funktioniert, wirkt aber nicht so fluessig.
