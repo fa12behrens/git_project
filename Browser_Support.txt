@@ -1,5 +1,6 @@
 Das Projekt wurde in folgenden Browsern getestet:
 
+Google Chrome 43.0.2357.124 -> Funktioniert einwandfrei.
 Firefox 38.0.5 -> Funktioniert einwandfrei.
 SRWare Iron 31.0.1700.0 -> Funktioniert. Bootstrap-Tabs flackern manchmal kurz.
 Opera 12.17 -> Nicht empfehlenswert.
